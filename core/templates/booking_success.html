@@ -1,0 +1,99 @@
+<!-- success.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Successful!</title>
+    <style>
+/* Dark theme with orange accents */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212121; /* Dark background */
+    color: #fff; /* White text */
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #333; /* Dark gray background */
+    border: 1px solid #444; /* Dark gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .success-message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFC107; /* Orange accent color */
+    margin-bottom: 20px;
+  }
+  
+  .booking-details {
+    margin-bottom: 20px;
+  }
+  
+  .booking-details li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #FFC107; /* Orange accent border */
+  }
+  
+  .booking-details li:before {
+    content: "\2022"; /* Bullet point */
+    color: #FFC107; /* Orange accent color */
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .button {
+    background-color: #FFC107; /* Orange accent color */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+  }
+  
+  .button:hover {
+    background-color: #FFA07A; /* Darker orange accent color */
+  }
+  
+  /* Additional styles for a more aesthetically pleasing design */
+  
+  .container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+  }
+  
+  .success-message {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Soft text shadow */
+  }
+  
+  .booking-details li {
+    background-color: #444; /* Dark gray background */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .booking-details li:hover {
+    background-color: #555; /* Darker gray background */
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="success-message">Booking Successful!</h1>
+        <p>Thank you for booking with us. Your booking details are as follows:</p>
+        <ul class="booking-details">
+          <li>Booking ID: {{ booking_id }}</li>
+            <li><strong>Name:</strong> {{ name }}</li>
+            <li><strong>Booking Date:</strong> {{ booking_date }}</li>
+            <li><strong>Booking Time:</strong> {{ booking_time }}</li>
+            
+        </ul>
+        <p><a href="{% url 'home' %}" class="button">Return to Home</a></p>
+    </div>
+</body>
+</html>

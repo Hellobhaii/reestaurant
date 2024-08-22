@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap');
+
+body {
+    font-family: 'Garamond', serif;
+    background-color: black;
+    background-image: url('images/res2.jpg');
+    background-size: cover;
+    background-position: middle;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.navbar {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #333, #444, #555);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+}
+
+.navbar.navbar-light .navbar-brand, .navbar.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar.navbar-light .navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+.navbar.navbar-light .navbar-brand, .navbar.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    opacity: 1;
+}
+
+.book-table {
+  background-color: #FFC107; /* Orange-golden color */
+  border-color: #FFC107; /* Orange-golden color */
+  color: #333; /* Dark gray text color */
+}
+
+.book-table:hover {
+  background-color: #FFA07A; /* Lighter orange-golden color on hover */
+  color: #fff; /* White text color on hover */
+}
+
+
+
+/* Mobile and tablet friendly design */
+@media (max-width: 768px) {
+    .navbar {
+        background-color: transparent;
+        background-image: linear-gradient(to right, #333, #444, #555);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0.7;
+    }
+    .navbar.navbar-light .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .navbar.navbar-light .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+    .navbar.navbar-light .navbar-brand, .navbar.navbar-light .navbar-nav .nav-link {
+        color: #fff;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        background-color: transparent;
+        background-image: linear-gradient(to right, #333, #444, #555);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0.7;
+    }
+    .navbar.navbar-light .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .navbar.navbar-light .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+}
+
+.navbar.navbar-light .navbar-brand, .navbar.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    opacity: 1;
+}
+
+.book-table {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: 2px solid #e99b09;
+    border-radius: 50px;
+    padding: 3px 20px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-table:hover {
+    background-color: #e99b09;
+    color: #333;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #e99b09;
+    border-radius: 50px;
+    padding: 3px 20px;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+.back-to-top:hover {
+    background-color: #e99b09;
+    color: #fff;
+}
+
+.video-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-container.hidden {
+    display: none;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #030303;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid #e99b09;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.video-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#menu {
+    background-color: #8d743d;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items {
+    display: none;
+}
+
+.menu-section h3 span.toggle-button {
+    cursor: pointer;
+}
+
+.menu-section h3 span.toggle-button:before {
+    content: "";
+}
+
+.menu-section h3 span.toggle-button.active:before {
+    content: "";
+}
+
+.menu-section {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+.menu-section h3 {
+    margin-top: 0;
+}
+
+.menu-section h3 span.toggle-button {
+    cursor: pointer;
+}
+
+.menu-section h3 span.toggle-button:before {
+    content: "";
+}
+
+.menu-section h3 span.toggle-button.active:before {
+    content: "";
+}
+
+.img-fluid {
+    display: block;
+    margin: 0 auto; /* center the image horizontally */
+    width: 80%; /* make the image 80% of its parent's width */
+    height: auto; /* maintain the image's aspect ratio */
+    text-align: center;
+}
+
+.packages-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-container {
+    background-color: rgba(55, 51, 42, 0.7);
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide {
+    opacity: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: white;
+}
+
+.swiper-slide img {
+    opacity: 1;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.events .section-title {
+    background-color: rgba(55, 51, 42, 0.7);
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+.events .events-slider {
+    background-color: rgba(55, 51, 42, 0.7);
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.about-box {
+    background-color: rgba(55, 51, 42, 0.7);
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.about-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    opacity: 1; /* set text opacity to 1 */
+    color: white;
+}
+
+.about-box img {
+    opacity: 1; /* set image opacity to 1 */
+}
+
+
